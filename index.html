@@ -25,6 +25,17 @@
   </style>
 </head>
 <body>
-  <iframe src="https://script.google.com/macros/s/AKfycbyE7Y46b3JiPEHC03kr0WbbSUEskyQC8aTlqV18cokY_k-Q6ysHR26-fhtSz_S3_6cc/exec"></iframe>
+  <iframe id="siteFrame" src="https://script.google.com/macros/s/AKfycbyE7Y46b3JiPEHC03kr0WbbSUEskyQC8aTlqV18cokY_k-Q6ysHR26-fhtSz_S3_6cc/exec"></iframe>
+  <script>
+    // 読み込み直後にレイアウトを強制的に再計算させる(スリープ復帰と同じ効果を狙う)
+    window.addEventListener('load', function () {
+      var frame = document.getElementById('siteFrame');
+      setTimeout(function () {
+        frame.style.display = 'none';
+        void frame.offsetHeight;
+        frame.style.display = 'block';
+      }, 300);
+    });
+  </script>
 </body>
 </html>

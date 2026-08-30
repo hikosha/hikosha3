@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>第3回ヒコシャメデル写真展「オレンジ&ゴールド」</title>
   <style>
@@ -33,7 +34,6 @@
       void frame.offsetHeight;
       frame.style.display = 'block';
     }
-    // 複数回タイミングを変えて再計算を試みる(ブラウザごとのタイミング差に対応)
     window.addEventListener('load', function () {
       [100, 400, 800, 1500].forEach(function (delay) {
         setTimeout(forceRelayout, delay);
